@@ -13,7 +13,7 @@ Options:
 
   -q, --quiet           only output stderr
   -x, --halt            halt on failure
-  -i, --interval <n>    interval in seconds or ms defaulting to 1
+  -i, -n <n>    interval in seconds or ms defaulting to 1
   -v, --version         output version number
 
 ```
@@ -45,13 +45,13 @@ $ PREFIX=~ make install
  with the `ms` suffix:
 
 ```
-$ watch -i 300ms echo hey
+$ watch -n 300ms echo hey
 ```
 
 whereas `300` would be seconds:
 
 ```
-$ watch -i 300 echo hey
+$ watch -n 300 echo hey
 ```
 
 ## Examples

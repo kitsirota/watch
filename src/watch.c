@@ -58,7 +58,7 @@ usage() {
     "\n"
     "    -q, --quiet           only output stderr\n"
     "    -x, --halt            halt on failure\n"
-    "    -i, --interval <n>    interval in seconds or ms defaulting to 1\n"
+    "    -i, -n <n>            interval in seconds or ms defaulting to 1\n"
     "    -v, --version         output version number\n"
     "    -h, --help            output this help information\n"
     "\n"
@@ -169,8 +169,8 @@ main(int argc, const char **argv){
       exit(1);
     }
 
-    // -i, --interval <n>
-    if (option("-i", "--interval", arg)) {
+    // -n, --interval <n>
+    if (option("-n", "-i", arg)) {
       if (argc-1 == i) {
         fprintf(stderr, "\n  --interval requires an argument\n\n");
 	exit(1);
